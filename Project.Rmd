@@ -1,0 +1,37 @@
+---
+title: "Developing data products assign 3"
+author: "Muhammad Hassaan Khan"
+date: "7 July 2020"
+output: html_document
+---
+
+```
+library(plotly)
+packageVersion('plotly')
+```
+#Basic Violin Plot
+
+```
+library(plotly)
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
+p <- df %>%
+  plot_ly(
+    y = ~total_bill,
+    type = 'violin',
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    ),
+    x0 = 'Total Bill'
+  ) %>% 
+  layout(
+    yaxis = list(
+      title = "",
+      zeroline = F
+    )
+  )
+chart_link <- api_create(p, filename = "violin-basic")
+chart_link
+```
