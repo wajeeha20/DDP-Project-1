@@ -1,7 +1,7 @@
 ---
 title: "Developing data products assign 3"
-author: "Muhammad Hassaan Khan"
-date: "7 July 2020"
+author: "Wajeeha Batool"
+date: "21 October 2020"
 output: html_document
 ---
 
